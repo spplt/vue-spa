@@ -1,17 +1,21 @@
 <template>
   <div id="app">
     <header>
-      <h1>Vue.js SPA</h1>
+      <h1>CoinRanking.de</h1>
     </header>
     <main>
       <aside class="sidebar">
+        <a href="#/" class="link"> <!-- Home link -->
+        Home
+        </a>
         <router-link
             v-for="post in posts"
+            :key="post.id"
             active-class="is-active"
             class="link"
             :to="{ name: 'post', params: { id: post.id } }">
           {{post.id}}. {{post.title}}
-        </router-link>
+        </router-link> <!-- All other links -->
       </aside>
       <div class="content">
         <router-view></router-view>
