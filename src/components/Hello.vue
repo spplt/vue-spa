@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 let CRYPTOCOMPARE_API_URI = "https://www.cryptocompare.com";
 
 // The API we're using for grabbing cryptocurrency prices.  The service can be
